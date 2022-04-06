@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2022_04_06_182144) do
 
   create_table "educations", force: :cascade do |t|
@@ -18,6 +17,8 @@ ActiveRecord::Schema.define(version: 2022_04_06_182144) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "school"
+    t.string "degree"
+    t.string "field_of_study"
     t.index ["user_id"], name: "index_educations_on_user_id"
   end
 
@@ -31,11 +32,6 @@ ActiveRecord::Schema.define(version: 2022_04_06_182144) do
     t.string "location"
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
-
-ActiveRecord::Schema.define(version: 2022_04_06_175619) do
-
-ActiveRecord::Schema.define(version: 2022_04_06_165901) do
-
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
