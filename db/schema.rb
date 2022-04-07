@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_06_182144) do
+ActiveRecord::Schema.define(version: 2022_04_06_210939) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "educations", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -33,12 +44,22 @@ ActiveRecord::Schema.define(version: 2022_04_06_182144) do
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "shares", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "skills", force: :cascade do |t|
