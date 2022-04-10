@@ -10,7 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_04_06_175619) do
+=======
+ActiveRecord::Schema.define(version: 2022_04_06_210939) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "school"
+    t.string "degree"
+    t.string "field_of_study"
+    t.index ["user_id"], name: "index_educations_on_user_id"
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.string "employment_type"
+    t.string "company_name"
+    t.string "location"
+    t.index ["user_id"], name: "index_experiences_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+>>>>>>> 1bbd7f12627eb097d64b83c6c63e2906712de97e
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -19,6 +60,21 @@ ActiveRecord::Schema.define(version: 2022_04_06_175619) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
+<<<<<<< HEAD
+=======
+
+  create_table "shares", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_skills_on_user_id"
+  end
+>>>>>>> 1bbd7f12627eb097d64b83c6c63e2906712de97e
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,5 +91,12 @@ ActiveRecord::Schema.define(version: 2022_04_06_175619) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
   add_foreign_key "posts", "users"
+=======
+  add_foreign_key "educations", "users"
+  add_foreign_key "experiences", "users"
+  add_foreign_key "posts", "users"
+  add_foreign_key "skills", "users"
+>>>>>>> 1bbd7f12627eb097d64b83c6c63e2906712de97e
 end
