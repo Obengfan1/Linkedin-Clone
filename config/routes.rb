@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'app/*path', to: 'spa#index'
 
 
-  resources :posts, only: [:new, :create]
+  resources :posts, only: [:create]
 
   devise_for :users
 
