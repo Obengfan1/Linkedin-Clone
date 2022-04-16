@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2022_04_12_123155) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "school"
+    t.string "degree"
+    t.string "field_of_study"
     t.index ["user_id"], name: "index_educations_on_user_id"
   end
 
