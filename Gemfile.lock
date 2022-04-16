@@ -116,8 +116,14 @@ GEM
     minitest (5.15.0)
     msgpack (1.5.1)
     nio4r (2.5.8)
-    nokogiri (1.13.4-x86_64-linux)
+
+    nokogiri (1.13.3-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.3-x86_64-linux)
+
+  
+
+    
     orm_adapter (0.5.0)
     public_suffix (4.0.7)
     puma (5.6.4)
@@ -230,6 +236,8 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  arm64-darwin-21
+
   x86_64-linux
 
 DEPENDENCIES

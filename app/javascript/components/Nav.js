@@ -20,8 +20,8 @@ class Nav extends React.Component {
 
             <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
-                
-                
+
+
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/assets/privatewealth">Link1</a>
                 <a class="dropdown-item" href="/assets/pension">PLink1</a>
@@ -32,7 +32,7 @@ class Nav extends React.Component {
             </div>
             </li>
 
-              
+
 
               <li class="nav-item">
                 <a class="nav-link " href="/contact">CONTACT</a>
@@ -42,21 +42,16 @@ class Nav extends React.Component {
                 <a class="nav-link " href="/news">NEWS</a>
               </li>
             </ul>
-            
+
           </div>
         </nav>
-       
+
         </div>
 
     );
 
     }
 }
-    
-
-
-
-
 
 
 export default Nav;
