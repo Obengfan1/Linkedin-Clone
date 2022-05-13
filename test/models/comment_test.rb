@@ -1,7 +1,12 @@
 require "test_helper"
 
 class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+   # def setup 
+   #   @comment = Comment.create(comment: "Nice product design")
+   # end
+
+   # test "comment should be valid" do
+   #    assert @comment.valid?
+   # end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_12_123155) do
+ActiveRecord::Schema.define(version: 2022_05_13_144900) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 2022_04_12_123155) do
   create_table "companies", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "website"
+    t.string "industry"
+    t.string "company_size"
+    t.string "headquarters"
+    t.string "business_type"
+    t.string "founded"
+    t.text "specialities"
   end
 
   create_table "educations", force: :cascade do |t|
