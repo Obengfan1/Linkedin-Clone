@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
 
   resources :posts, only: [:create]
+  resources :companies 
 
   devise_for :users
 
