@@ -1,0 +1,47 @@
+
+ 
+<div class="row">
+    <div class="well col-md-8 col-md-offset-2">
+        <%= form_for(@company, html: { multipart: true}) do |f| %>
+            <%= f.label :businss_type %>
+            <%= f.text_field :business_type %>
+
+            <%= f.label :industry %>
+            <%= f.text_field :industry %>
+
+            <%= f.label :headquarters %>
+            <%= f.text_field :headquarters %>
+            
+            <%= f.label :specialities %>
+            <%= f.text_area :specialities, rows: 10 %>
+
+            <%= f.label :website %>
+            <%= f.text_field :website %>
+
+            <%= f.label :founded %>
+            <%= f.text_field :founded %>
+
+            <%= f.label :company_size %>
+            <%= f.text_field :company_size %>
+
+            
+             <% if false %>
+            <span class="picture">
+                <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'%>
+            </span>
+                <% end %>
+
+            <%= f.submit(@company.new_record? ? 'Create Company' : 'Edit Company', class: "btn btn-success") %>
+
+        <% end %>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#recipe_picture').bind('change', function(){
+        size_in_megabytes = this.files[0].size/1024/1024;
+        if(size_in_megabytes > 5){
+            alert("<aximum file size is 5MB. Please choose a smaller file")
+        }
+    });
+</script>
