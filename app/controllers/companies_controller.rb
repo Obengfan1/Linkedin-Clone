@@ -7,9 +7,10 @@ class CompaniesController < ApplicationController
     end 
 
     def create
+       @company = Company.new(company_params)
         if @company.save 
             flash[:success] = "Your company was successfully created"
-            redirect_to company_path
+            # redirect_to company_path
         else 
             render :new
         end 
